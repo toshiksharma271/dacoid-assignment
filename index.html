@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <link href="style.css" rel="stylesheet" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <script src="https://d3js.org/d3.v6.min.js"></script>
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+
+    <title>Vite App</title>
+  </head>
+  <body class="h-[100dvh] overflow-hidden">
+    <!-- step 1 -->
+    <div
+      id="step1"
+      class="container relative max-w-md border mx-auto flex justify-center items-center min-h-[100dvh]"
+    >
+      <div class="bg-white rounded-lg flex flex-col gap-8 absolute inset-0 p-4">
+        <a
+          href="#step3"
+          class="self-end underline underline-offset-2 text-blue-600"
+        >
+          Skip
+        </a>
+        <div class="flex-1 flex flex-col gap-4">
+          <div class="w-full aspect-square flex items-center justify-center">
+            <img
+              src="image1.png"
+              alt="Image description"
+              class="w-full h-auto px-8"
+            />
+          </div>
+          <h1 class="text-xl mt-4 capitalize font-semibold">Track your goal</h1>
+          <p class="text-[#787878] font-medium text-balance">
+            Don't worry if you have trouble determining your goals, We can help
+            you determine your goals and track your goals.
+          </p>
+          <a
+            href="#step2"
+            class="p-1 mt-auto border-2 border-white border-t-[#89A1FF] self-end rounded-full rotate-45"
+          >
+            <button
+              class="bg-gradient-to-r self-end -rotate-45 from-[#DEE5FF] to-[#809AFF] text-white rounded-full aspect-square p-4 shadow-md"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="lucide lucide-chevron-right"
+              >
+                <path d="m9 18 6-6-6-6" />
+              </svg>
+            </button>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- step2 -->
+    <div
+      id="step2"
+      class="container relative max-w-md border mx-auto flex justify-center items-center min-h-[100dvh]"
+    >
+      <div class="bg-white rounded-lg flex flex-col gap-8 absolute inset-0 p-4">
+        <div class="flex-1 flex flex-col gap-4">
+          <div class="w-full aspect-square flex items-center justify-center">
+            <img
+              src="image2.png"
+              alt="Image description"
+              class="w-full h-auto px-8"
+            />
+          </div>
+          <h1 class="text-xl mt-4 capitalize font-semibold">Get Burn</h1>
+          <p class="text-[#787878] font-medium text-balance">
+            Let's keep burning to achieve your goals, it hurts only temporarily,
+            if you give up now you will be in pain forever
+          </p>
+          <a
+            href="#step3"
+            class="p-1 mt-auto border-2 border-white border-t-[#89A1FF] border-r-[#89A1FF] self-end rounded-full rotate-45"
+          >
+            <button
+              class="bg-gradient-to-r self-end -rotate-45 from-[#DEE5FF] to-[#809AFF] text-white rounded-full aspect-square p-4 shadow-md"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="lucide lucide-chevron-right"
+              >
+                <path d="m9 18 6-6-6-6" />
+              </svg>
+            </button>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Step3 Create Account-->
+    <div
+      id="step3"
+      class="container relative max-w-md border mx-auto flex justify-center items-center min-h-[100dvh]"
+    >
+      <div class="bg-white rounded-lg flex flex-col gap-8 absolute inset-0 p-4">
+        <div class="flex-1 flex flex-col gap-8">
+          <h1 class="text-xl font-semibold mt-4">Create an account</h1>
+
+          <form class="flex flex-1 flex-col gap-4">
+            <input
+              type="text"
+              placeholder="First Name"
+              class="bg-[#F1F1F1] px-4 py-4 font-semibold rounded-lg text-sm"
+            />
+            <input
+              type="text"
+              placeholder="Last Name"
+              class="bg-[#F1F1F1] px-4 py-4 font-semibold rounded-lg text-sm"
+            />
+            <input
+              type="email"
+              placeholder="Email"
+              class="bg-[#F1F1F1] px-4 py-4 font-semibold rounded-lg text-sm"
+            />
+            <span class="relative flex w-full">
+              <input
+                type="password"
+                placeholder="Password"
+                class="bg-[#F1F1F1] w-full px-4 py-4 font-semibold rounded-lg text-sm"
+              />
+              <img src="eye.svg" class="absolute right-3 top-3" alt="" />
+            </span>
+            <label class="flex items-center text-sm gap-x-2">
+              <input
+                type="checkbox"
+                name="agree"
+                class="w-5 accent-red-500 aspect-square"
+                id="agree"
+              />
+              <p class="text-[#7f7f7f] font-medium">
+                By proceeding, I agree to all
+                <a href="#" class="underline text-blue-300">T&C</a> and
+                <a href="#" class="underline text-blue-300">Privacy Policy</a>
+              </p>
+            </label>
+
+            <a
+              href="#step5"
+              class="flex justify-center mt-auto bg-gradient-to-l from-[#7B91FF] to-[#95BEFF] font-semibold text-white py-4 rounded-xl"
+            >
+              Create an Account
+            </a>
+            <div class="my-2 relative">
+              <hr class="bg-gray-300 h-0.5" />
+              <p class="absolute left-1/2 top-1/2 -mt-3 -ml-6 bg-white px-4">
+                OR
+              </p>
+            </div>
+            <div class="flex items-center gap-x-4 justify-center">
+              <button
+                class="w-fit p-3 rounded-lg aspect-square border-[#7F7F7F] border"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  width="24"
+                >
+                  <path
+                    d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"
+                    fill="#4285F4"
+                  />
+                  <path
+                    d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"
+                    fill="#34A853"
+                  />
+                  <path
+                    d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"
+                    fill="#FBBC05"
+                  />
+                  <path
+                    d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"
+                    fill="#EA4335"
+                  />
+                  <path d="M1 1h22v22H1z" fill="none" />
+                </svg>
+              </button>
+              <button
+                class="w-fit p-3 rounded-lg aspect-square border-[#7F7F7F] border"
+              >
+                <img
+                  src="/facebook.svg"
+                  alt=""
+                  class="w-6 aspect-square text-[#1A7AEB]"
+                />
+              </button>
+            </div>
+            <p class="text-center">
+              Already have an account?
+              <a href="#login" class="underline text-blue-300">Login</a>
+            </p>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <!-- Step4 Login -->
+    <div
+      id="login"
+      class="container relative max-w-md border mx-auto flex justify-center items-center min-h-[100dvh]"
+    >
+      <div class="bg-white rounded-lg flex flex-col gap-8 absolute inset-0 p-4">
+        <div class="flex-1 flex flex-col gap-8">
+          <h1 class="text-xl font-semibold mt-4">Welcome Back</h1>
+
+          <form class="flex flex-1 flex-col gap-4">
+            <input
+              type="email"
+              placeholder="Email"
+              class="bg-[#F1F1F1] px-4 py-4 font-semibold rounded-lg text-sm"
+            />
+            <span class="relative flex w-full">
+              <input
+                type="password"
+                placeholder="Password"
+                class="bg-[#F1F1F1] w-full px-4 py-4 font-semibold rounded-lg text-sm"
+              />
+              <img src="eye.svg" class="absolute right-3 top-3" alt="" />
+            </span>
+            <label class="flex items-center text-sm gap-x-2">
+              <p class="text-[#7f7f7f] font-medium">
+                <a href="#" class="underline text-[#7F7F7F]"
+                  >Forgot your password?</a
+                >
+              </p>
+            </label>
+            <a
+              href="#step5"
+              class="flex justify-center mt-auto bg-gradient-to-l from-[#7B91FF] to-[#95BEFF] font-semibold text-white py-4 rounded-xl"
+            >
+              Sign In
+            </a>
+
+            <div class="my-2 relative">
+              <hr class="bg-gray-300 h-0.5" />
+              <p class="absolute left-1/2 top-1/2 -mt-3 -ml-6 bg-white px-4">
+                OR
+              </p>
+            </div>
+            <div class="flex items-center gap-x-4 justify-center">
+              <button
+                class="w-fit p-3 rounded-lg aspect-square border-[#7F7F7F] border"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  width="24"
+                >
+                  <path
+                    d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"
+                    fill="#4285F4"
+                  />
+                  <path
+                    d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"
+                    fill="#34A853"
+                  />
+                  <path
+                    d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"
+                    fill="#FBBC05"
+                  />
+                  <path
+                    d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"
+                    fill="#EA4335"
+                  />
+                  <path d="M1 1h22v22H1z" fill="none" />
+                </svg>
+              </button>
+              <button
+                class="w-fit p-3 rounded-lg aspect-square border-[#7F7F7F] border"
+              >
+                <img
+                  src="/facebook.svg"
+                  alt=""
+                  class="w-6 aspect-square text-[#1A7AEB]"
+                />
+              </button>
+            </div>
+            <p class="text-center">
+              Don't have an account yet?
+              <a href="#step3" class="underline text-blue-300"
+                >Create an account</a
+              >
+            </p>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <!-- Step5 -->
+    <div
+      id="step5"
+      class="container relative max-w-md border mx-auto flex justify-center items-center min-h-[100dvh]"
+    >
+      <div class="bg-white rounded-lg flex flex-col gap-8 absolute inset-0 p-4">
+        <div class="flex-1 flex flex-col gap-8">
+          <h1 class="text-xl font-semibold mt-4 flex self-center">
+            What are your goals?
+          </h1>
+
+          <form class="flex flex-1 flex-col gap-4">
+            <label
+              class="bg-[#F1F1F1] px-4 py-4 font-semibold rounded-lg flex justify-between items-center text-sm gap-x-2"
+            >
+              <p class="text-[#2C2B2B]">Weight Loss</p>
+              <input
+                type="checkbox"
+                name="agree"
+                class="w-5 accent-red-500 aspect-square"
+                id="agree"
+              />
+            </label>
+            <label
+              class="bg-[#F1F1F1] px-4 py-4 font-semibold rounded-lg flex justify-between items-center text-sm gap-x-2"
+            >
+              <p class="text-[#2C2B2B]">Muscle Gain</p>
+              <input
+                type="checkbox"
+                name="agree"
+                class="w-5 accent-red-500 aspect-square"
+                id="agree"
+              />
+            </label>
+            <label
+              class="bg-[#F1F1F1] px-4 py-4 font-semibold rounded-lg flex justify-between items-center text-sm gap-x-2"
+            >
+              <p class="text-[#2C2B2B]">Flexibility and Mobility</p>
+              <input
+                type="checkbox"
+                name="agree"
+                class="w-5 accent-red-500 aspect-square"
+                id="agree"
+              />
+            </label>
+            <label
+              class="bg-[#F1F1F1] px-4 py-4 font-semibold rounded-lg flex justify-between items-center text-sm gap-x-2"
+            >
+              <p class="text-[#2C2B2B]">General Fitness</p>
+              <input
+                type="checkbox"
+                name="agree"
+                class="w-5 accent-red-500 aspect-square"
+                id="agree"
+              />
+            </label>
+            <label
+              class="bg-[#F1F1F1] px-4 py-4 font-semibold rounded-lg flex justify-between items-center text-sm gap-x-2"
+            >
+              <p class="text-[#2C2B2B]">Event - specific training</p>
+              <input
+                type="checkbox"
+                name="agree"
+                class="w-5 accent-red-500 aspect-square"
+                id="agree"
+              />
+            </label>
+            <label
+              class="bg-[#F1F1F1] px-4 py-4 font-semibold rounded-lg flex justify-between items-center text-sm gap-x-2"
+            >
+              <p class="text-[#2C2B2B]">Mindfulness and Mental Health</p>
+              <input
+                type="checkbox"
+                name="agree"
+                class="w-5 accent-red-500 aspect-square"
+                id="agree"
+              />
+            </label>
+
+            <a
+              href="#step6"
+              class="flex justify-center mt-auto bg-gradient-to-l from-[#7B91FF] to-[#95BEFF] font-semibold text-white py-4 rounded-xl"
+            >
+              Confirm
+            </a>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <!-- step6 -->
+
+    <div
+      id="step6"
+      class="container relative gap-y-3 max-w-md border mx-auto pt-6 flex flex-col justify-start items-center min-h-[100dvh]"
+    >
+      <h1 class="text-2xl text-center font-semibold">Workout Tracker</h1>
+      <a href="#step7" class="self-start">
+        <svg id="chart" ></svg>
+      </a>
+      <div class="flex flex-col items-center justify-center px-4 my-2">
+        <div
+          class="flex items-center px-4 py-2 gap-x-3 rounded-xl bg-gradient-to-r from-[#819DFF70] to-[#10101000]"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="lucide lucide-triangle-alert scale-150 text-[#7E96FF]"
+          >
+            <path
+              d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3"
+            />
+            <path d="M12 9v4" />
+            <path d="M12 17h.01" />
+          </svg>
+          <p class="font-medium">
+            You've burned fewer calories than yesterday. Time to get moving!
+          </p>
+        </div>
+        <div class="w-full space-y-3 my-4">
+          <div class="flex w-full justify-between">
+            <h2 class="text-xl font-semibold">Upcoming Workout</h2>
+            <a href="#" class="font-medium text-[#7F7F7F]">See more</a>
+          </div>
+          <div
+            class="switches shadow-md rounded-2xl p-3 flex w-full gap-x-3 items-center"
+          >
+            <img src="/full.svg" alt="" />
+            <div class="flex flex-col">
+              <h3 class="text-lg font-medium">Full Body Workout</h3>
+              <small>Today 3pm</small>
+            </div>
+            <label class="switch scale-y-90 ml-auto">
+              <input type="checkbox" />
+              <span class="slider"></span>
+            </label>
+          </div>
+          <div
+            class="switches shadow-md rounded-2xl p-3 flex w-full gap-x-3 items-center"
+          >
+            <img src="/upper.svg" alt="" />
+            <div class="flex flex-col">
+              <h3 class="text-lg font-medium">Upper Body Workout</h3>
+              <small>4 Feb, 3:30 pm</small>
+            </div>
+            <label class="switch scale-y-90 ml-auto">
+              <input type="checkbox" />
+              <span class="slider"></span>
+            </label>
+          </div>
+        </div>
+
+        <div class="w-full space-y-3">
+          <h2 class="text-xl font-semibold">What Do You Want to Train</h2>
+          <div
+            class="flex bg-[#8CB1FF60] p-4 items-center rounded-xl justify-between"
+          >
+            <div class="flex flex-col gap-y-1">
+              <h3 class="text-lg">Full Body Workout</h3>
+              <small>Arms</small>
+              <small>Chest</small>
+            </div>
+            <img src="/fitness.svg" alt="" />
+          </div>
+        </div>
+      </div>
+
+      <nav
+        class="w-full border-t absolute bg-white p-2 bottom-0 pt-4 pb-6 flex justify-evenly"
+      >
+        <img src="/home.svg" alt="" />
+        <img src="/graph.svg" alt="" />
+        <button
+          class="bg-gradient-to-r self-end absolute -top-8 from-[#DEE5FF] to-[#809AFF] text-white rounded-full aspect-square p-4 shadow-md"
+        >
+          <img src="/lens.svg" alt="" />
+        </button>
+        <div class=""></div>
+        <img src="/camera.svg" alt="" />
+        <img src="/user.svg" alt="" />
+      </nav>
+    </div>
+
+    <!-- step7 -->
+
+    <div
+      id="step7"
+      class="container relative gap-y-3 max-w-md border mx-auto pt-6 flex flex-col justify-start items-center min-h-[100dvh]"
+    >
+      <h1 class="text-2xl text-center font-semibold">Workout Schedule</h1>
+      <div class="flex gap-x-2 mx-auto">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-left"><path d="m15 18-6-6 6-6"/></svg>
+        <p class="font-medium">Feb 2024</p>
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-right"><path d="m9 18 6-6-6-6"/></svg>
+      </div>
+
+      <div class="flex w-full justify-evenly">
+        <div class="flex flex-col items-center justify-center p-2 px-4 rounded-xl pb-4">
+          <small class="text-xs font-medium">Sun</small>
+          <h3 class="text-2xl font-semibold">5</h3>
+        </div>
+        <div class="flex flex-col items-center text-white justify-center p-2 px-4 rounded-xl pb-4 bg-gradient-to-br from-[#8DA4FF] to-[#D1DBFF]">
+          <small class="text-xs font-medium">Mon</small>
+          <h3 class="text-2xl font-semibold">6</h3>
+        </div>
+        <div class="flex flex-col items-center justify-center p-2 px-4 rounded-xl pb-4">
+          <small class="text-xs font-medium">Tue</small>
+          <h3 class="text-2xl font-semibold">7</h3>
+        </div>
+        <div class="flex flex-col items-center justify-center p-2 px-4 rounded-xl pb-4">
+          <small class="text-xs font-medium">Wed</small>
+          <h3 class="text-2xl font-semibold">8</h3>
+        </div>
+        <div class="flex flex-col items-center justify-center p-2 px-4 rounded-xl pb-4">
+          <small class="text-xs font-medium">Thu</small>
+          <h3 class="text-2xl font-semibold">9</h3>
+        </div>
+      </div>
+
+      <div id="calendar" class="flex relative w-full flex-col justify-between flex-1 mb-24">
+
+      </div>
+
+      <nav
+        class="w-full border-t absolute bg-white p-2 bottom-0 pt-4 pb-6 flex justify-evenly"
+      >
+        <img src="/home.svg" alt="" />
+        <img src="/graph.svg" alt="" />
+        <button
+          class="bg-gradient-to-r self-end absolute -top-8 from-[#DEE5FF] to-[#809AFF] text-white rounded-full aspect-square p-4 shadow-md"
+        >
+          <img src="/lens.svg" alt="" />
+        </button>
+        <div class=""></div>
+        <img src="/camera.svg" alt="" />
+        <img src="/user.svg" alt="" />
+      </nav>
+    </div>
+
+    <div class="hidden border-b-2 pb-2"></div>
+
+    <script type="module" src="/main.js"></script>
+  </body>
+</html>
